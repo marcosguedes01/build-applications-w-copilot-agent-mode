@@ -2,8 +2,7 @@ from rest_framework import viewsets
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from django.http import JsonResponse
-
-def api_root(request):
+def api_root(request, format=None):
     base_url = "https://jubilant-space-meme-7v566jrxw7p2xq7r-8000.app.github.dev"
 
     return JsonResponse({

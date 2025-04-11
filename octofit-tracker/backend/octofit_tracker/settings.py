@@ -148,9 +148,14 @@ ALLOWED_HOSTS += [
     '127.0.0.1'
 ]
 
+INSTALLED_APPS += [
+    'rest_framework',
+]
+
 # Add REST framework default renderer settings
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     ),
 }
