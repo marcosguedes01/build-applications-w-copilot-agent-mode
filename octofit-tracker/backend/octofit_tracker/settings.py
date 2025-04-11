@@ -25,7 +25,7 @@ SECRET_KEY = '49w3_t^)6aj2=v-9k_@nw^6e(k0sp8y+0y_k8ko#1kmc_x(v(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['jubilant-space-meme-7v566jrxw7p2xq7r-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'octofit_tracker',
 ]
 
 MIDDLEWARE = [
@@ -120,11 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Enable CORS
-INSTALLED_APPS += [
-    'octofit_tracker',
-]
-
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = [
@@ -139,13 +135,6 @@ CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization',
     'x-csrftoken',
-]
-
-# Allow all hosts
-ALLOWED_HOSTS += [
-    'jubilant-space-meme-7v566jrxw7p2xq7r-8000.app.github.dev',
-    'localhost',
-    '127.0.0.1'
 ]
 
 INSTALLED_APPS += [
